@@ -25,7 +25,7 @@ class Node{
    }
 
    //Insert at nth position
-   void insertAtNthPosition(Node* &head, int position ,int data){
+   void insertAtNthPosition(Node* &head,Node* &tail, int position ,int data){
     Node* newNode=new Node(data);
     if(position==1){
         newNode->next=head;
@@ -39,6 +39,10 @@ class Node{
     while(temp!=NULL && count<position-1){
         temp=temp->next;
         count++;
+   }
+    //Update tail if position is last
+  if(tail->next==NULL){
+    tail=newNode;
    }
     
     newNode->next=temp->next;
@@ -76,7 +80,7 @@ int main(){
     insertAtTail(tail,40);
      insertAtTail(tail,50);
      //--------Now insert any position-------
-     insertAtNthPosition(head,1,25);
+     insertAtNthPosition(head,tail,1,25);
   
     print(head);
 
