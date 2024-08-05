@@ -1,4 +1,4 @@
-
+//Brute force: use set and store all unique element in set after complete it,make new linked with set value.
 // ------------Optimal soluction---------
 ListNode* deleteDuplicates(ListNode* head) {
          if (head == nullptr || head->next == nullptr) {
