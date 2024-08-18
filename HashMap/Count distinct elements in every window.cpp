@@ -1,4 +1,8 @@
- vector <int> countDistinct (int A[], int n, int k)
+/* Link: https://www.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1?page=1&category=sliding-window&difficulty=Easy&sortBy=submissions
+
+*/
+
+vector <int> countDistinct (int A[], int n, int k)
     {
         //code here.
         unordered_map<int,int>um;
