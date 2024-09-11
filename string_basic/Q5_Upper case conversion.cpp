@@ -17,10 +17,9 @@ string transform(string s)
         
          if(s[i]==' ' && i + 1 < s.length()){
          str.push_back(s[i]);
-             
-            i++;
-            str.push_back(s[i]-32);
-        }
+          i++;
+          str.push_back(s[i]-32);
+    }
         
         else{
             
