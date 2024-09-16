@@ -1,0 +1,51 @@
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    
+    int arr[]={64,25,12,22,11};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    
+   for(int i=0; i<n-1; i++){
+       int small=i;
+       for(int j=i+1; j<n; j++){
+           if(arr[small]>arr[j]){
+               small=j;
+           }
+           
+       }
+       swap(arr[i],arr[small]);
+   }
+   for(int i=0; i<n; i++){
+       cout<<arr[i]<<" ";
+   }
+
+    return 0;
+}
+
+...............Complexity Analysis of Selection Sort........................
+
+➤ Time Complexity: The time complexity of Selection Sort is O(n^2) as there are two nested loops
+
+➤ Auxiliary Space: O(1) as the only extra memory used is for temporary variables.
+
+
+    ...........Advantages of Selection Sort Algorithm......................
+
+➤ Simple and easy to understand.
+➤ Works well with small datasets.
+
+...............Disadvantages of the Selection Sort Algorithm..............
+
+   ➤ Selection sort has a time complexity of O(n^2) in the worst and average case.
+   ➤ Does not work well on large datasets.
+   ➤ Does not preserve the relative order of items with equal keys which means it is not stable.
+
+    ................Questions on Selection Sort...................
+
+   Q1. Is Selection Sort Algorithm stable?
+  Answer:- The default implementation of the Selection Sort Algorithm is not stable. However, it can be made stable.
+
+   Q2. Is Selection Sort Algorithm in-place?
+ Answer:- Yes, Selection Sort Algorithm is an in-place algorithm, as it does not require extra space.
