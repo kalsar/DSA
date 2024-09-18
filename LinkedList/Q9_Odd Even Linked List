@@ -1,0 +1,49 @@
+ // brute force 
+
+T.C: O(n)
+S.C: O(n)
+------------------------Code------------------------------
+
+      ListNode* oddEvenList(ListNode* head) {
+      if (!head || !head->next) return head;
+
+    ListNode *oddItr = head, *evenItr = head->next, *dummy = new ListNode(), *temp = dummy;
+
+    while (oddItr) {
+        temp->next = new ListNode(oddItr->val);
+        temp = temp->next;
+        oddItr = oddItr->next ? oddItr->next->next : nullptr;
+    }
+
+    while (evenItr) {
+        temp->next = new ListNode(evenItr->val);
+        temp = temp->next;
+        evenItr = evenItr->next ? evenItr->next->next : nullptr;
+    }
+
+    return dummy->next;
+    }
+Approach 2: Optimal appoarch---------------
+T.C=O(n)
+S.C=O(1)
+-------------------code----------------------
+ListNode* oddEvenList(ListNode* head) {
+        if(head==NULL){
+            return head;
+        }
+        ListNode* odd=head;
+        ListNode* even=head->next;
+        ListNode*  evenHead=even;
+        while(even!=NULL && even->next!=NULL){
+            // change pointer of odd list
+            odd->next=even->next;
+            odd=odd->next;
+            // change pointer of even list
+            even->next=odd->next;
+            even=even->next;
+            // assign even list at the end of odd list
+            odd->next=evenHead;
+           
+        }
+         return head;
+}
