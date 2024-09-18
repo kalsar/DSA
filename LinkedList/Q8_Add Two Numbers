@@ -1,6 +1,8 @@
 Leetcode:2;
 Link:https://leetcode.com/problems/add-two-numbers/?envType=problem-list-v2&envId=linked-list
 tutorial: TUF
+T.C= O(max(N1,N2))
+S.C=O(max(N1,N2))  // isse jayda hum optimize nhi kr sakte space ko kyu ki ye answer store ke liye jaruri tha
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* t1=l1;
