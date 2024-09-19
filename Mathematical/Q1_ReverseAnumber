@@ -1,0 +1,14 @@
+:-Reverse a number.....
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int x=12345;
+    int sum=0;
+    while(x){
+       int digit=x%10;
+        x=x/10;
+       sum=sum*10+digit;
+   }
+   cout<<" Answer is:"<<sum;
+return 0;
+}
