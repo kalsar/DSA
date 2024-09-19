@@ -1,0 +1,12 @@
+---------Code-----------------
+string armstrongNumber(int n) {
+        int sum=0;
+        int N=n;
+        while(n){
+            int digit=n%10;
+            n=n/10;
+            sum=sum+digit*digit*digit;
+            }
+      
+      return (sum==N)? "true":"false";
+    }
