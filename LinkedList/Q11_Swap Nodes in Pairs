@@ -1,0 +1,25 @@
+
+Leetcode:24th
+T.C=O(n)
+S.C=O(1)
+..................code.............................
+ListNode* swapPairs(ListNode* head) {
+        ListNode* dummy=new ListNode();
+        dummy->next=head;
+        ListNode* p=dummy;
+        while(p->next!=NULL and p->next->next!=NULL){
+            //identify nodes to swap 
+            ListNode* swap1=p->next;
+            ListNode* swap2=p->next->next;
+
+            //Now swap
+            swap1->next=swap2->next;
+            swap2->next=swap1;
+
+            //preparing for next
+            p->next=swap2;
+            p=swap1;
+
+    }
+  return dummy->next;
+}
