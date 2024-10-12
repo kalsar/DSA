@@ -1,0 +1,23 @@
+Leetcode:11
+Approach : Optimal
+
+----------------Code------------------------
+
+ int maxArea(vector<int>& height) {
+        int start=0;
+        int end=height.size()-1;
+        int maxi=INT_MIN;
+        while(start<end){
+            int mini=min(height[start],height[end]);
+            int Area=mini*(end-start);
+            maxi=max(Area,maxi);
+            if(height[start]<height[end]){
+                start++;
+            }
+            else{
+                end--;
+            }
+          }
+     return maxi;
+
+}
