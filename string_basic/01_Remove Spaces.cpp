@@ -1,3 +1,4 @@
+Link: https://www.geeksforgeeks.org/problems/remove-spaces0128/1?page=1&category=Strings&difficulty=Basic&status=solved&sortBy=submissions
 /* Input:
 S = "geeks  for geeks"
 Output: geeksforgeeks
